@@ -1,0 +1,98 @@
+.BlogPage_Banner {
+    background-color: #594d46;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    position: relative;
+    @media only screen and (max-width: 767px) {
+      height: 80vh;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(rgba(0,0,0,0.7));
+      opacity: .6;
+    }
+  
+    &__title {
+      font-size: 3.2rem;
+      color: #fff;
+      font-weight: bold;
+      width: 100%;
+      position: absolute !important;
+      top: 50%;
+      -ms-transform: translate(0%, -50%);
+      -webkit-transform: translate(0%, -50%);
+      transform: translate(0%, -50%);
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    &__subtitle {
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: bold;
+        width: 100%;
+        position: absolute !important;
+        top: 60%;
+        -ms-transform: translate(0%, -50%);
+        -webkit-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+  }
+
+  .Single_section_1{
+    background-color:  #594D46;
+    .container {
+      padding-top: 50px;
+      padding-bottom: 90px;
+      width: 1140px;
+      max-width: 60%;
+      @media only screen and (max-width: 767px) {
+        max-width: 100% !important;
+      }
+      margin: 0 auto;
+      color: #FFFFFF;
+      .flex{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .date, .category{
+          width: 13%;
+          @media only screen and (max-width: 767px) {
+            width: 100% !important;
+          }
+          i{
+            padding-right: 5px;
+          }
+        }
+        .space{
+          width: 84%;
+          @media only screen and (max-width: 769px) {
+            width: 0%;
+          }
+        }
+      }
+      .title{
+        font-size: 30px;
+        font-weight: bold;
+        @media only screen and (max-width: 769px) {
+          font-size: 24px !important;
+        }
+      }
+
+      .img_container{
+        width: 100%;
+        max-width: 95%;
+        margin: 20px auto;
+      }
+    }
+  }

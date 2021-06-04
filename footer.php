@@ -10,7 +10,7 @@
   })
 </script>
 </body>
-
+<script src="https://kit.fontawesome.com/bbae5e1458.js" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/1ecbb748f3.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src='assets/js/jquery-scroll-animate.js'></script>

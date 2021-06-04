@@ -1,0 +1,125 @@
+.BlogPage_Banner {
+  background-color: #594d46;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .BlogPage_Banner {
+    height: 80vh;
+  }
+}
+
+.BlogPage_Banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7));
+  opacity: .6;
+}
+
+.BlogPage_Banner__title {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.BlogPage_Banner__subtitle {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 60%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.Single_section_1 {
+  background-color: #594D46;
+}
+
+.Single_section_1 .container {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  width: 1140px;
+  max-width: 60%;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 767px) {
+  .Single_section_1 .container {
+    max-width: 100% !important;
+  }
+}
+
+.Single_section_1 .container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.Single_section_1 .container .flex .date, .Single_section_1 .container .flex .category {
+  width: 13%;
+}
+
+@media only screen and (max-width: 767px) {
+  .Single_section_1 .container .flex .date, .Single_section_1 .container .flex .category {
+    width: 100% !important;
+  }
+}
+
+.Single_section_1 .container .flex .date i, .Single_section_1 .container .flex .category i {
+  padding-right: 5px;
+}
+
+.Single_section_1 .container .flex .space {
+  width: 84%;
+}
+
+@media only screen and (max-width: 769px) {
+  .Single_section_1 .container .flex .space {
+    width: 0%;
+  }
+}
+
+.Single_section_1 .container .title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 769px) {
+  .Single_section_1 .container .title {
+    font-size: 24px !important;
+  }
+}
+
+.Single_section_1 .container .img_container {
+  width: 100%;
+  max-width: 95%;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=single.css.map */

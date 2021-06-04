@@ -256,6 +256,7 @@
                         height: 350px;
                     }
 
+<<<<<<< HEAD
                     .gmap_canvas {
                         overflow: hidden;
                         background: none !important;
@@ -269,6 +270,39 @@
                 </style>
             </div>
         </div>
+=======
+</main>
+<footer>
+  <div class="container">
+    <div class="left">
+      <h3>About Us</h3>
+      <hr>
+      <p> <br>
+        株式会社NA <br><br>
+        〒133-0056 <br>
+        東京都江戸川区南小岩2-3-15 <br><br>
+        TEL 03-6657-9811 <br>
+        FAX 03-6657-9812 <br><br>
+      </p>
+    </div>
+    <div class="c_left nav-act">
+      <h3>サイトマップ</h3>
+      <hr><br><br>
+      <li class="link active"><a href="front-page.php">TOP</a></li>
+      <li class="link"><a href="service.php">弊社サービス</a></li>
+      <li class="link"><a href="flow.php">お問合せからの流れ</a></li>
+      <li class="link"><a href="company_info.php">会社概要</a></li>
+      <li class="link"><a href="recruitment.php">採用情報</a></li>
+      <li class="link"><a href="contact.php">お問い合わせ</a></li>
+    </div>
+    <div class="c_right">
+    <h3>Contact Us</h3>
+      <hr><br><br>
+      <p>以下よりお気軽にお問合せ下さい。</p>
+      <a href="contact.php">
+        <button class="btn_ft">お問合せページへ</button>
+      </a>
+>>>>>>> dc100ef38575ddd370256ad9ec80f26f2ded44ad
     </div>
     <div class="copyright">
         <p><span>&copy;</span>2020 NA. All rights reserved.</p>
