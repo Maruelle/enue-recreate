@@ -214,13 +214,11 @@
                 <?php if ($the_query->have_posts()) : ?>
 
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <table>
-                            <tr>
-                                <td><?php echo get_the_date(); ?></td>
-                                <td><?php the_title(); ?></td>
-                                <td> <a href="<?php echo get_permalink(); ?>"> Read More</a></td>
-                            </tr>
-                        </table>
+                        <div class="news_container">
+                            <p class="n-date"><i class="fas fa-calendar"></i><?php echo get_the_date(); ?></p>
+                            <p class="n-title"><?php the_title(); ?></p>
+                            <a href="<?php echo get_permalink(); ?>"> <button class="n-btn">Read More</button></a>
+                        </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>

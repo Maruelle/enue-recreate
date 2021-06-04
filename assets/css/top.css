@@ -298,6 +298,7 @@
   width: 49%;
   -o-object-fit: contain;
      object-fit: contain;
+  height: 80vh;
 }
 
 .section_4 .container .blog_container__right {
@@ -316,10 +317,7 @@
   background-color: #ffffff;
   width: 100% !important;
   margin-bottom: 20px;
-}
-
-.section_4 .container .blog_container__right .blog_wrapper .blog_wrapper:nth-child(2) {
-  margin-bottom: unset !important;
+  height: 25vh;
 }
 
 .section_4 .container .blog_container__right .blog_wrapper__img {
@@ -329,6 +327,7 @@
 .section_4 .container .blog_container__right .blog_wrapper__img img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100% !important;
 }
 
 .section_4 .container .blog_container__right .blog_wrapper__text {
@@ -341,19 +340,17 @@
   background-color: #d1b280;
   color: #ffffff;
   padding: 3px;
+  font-size: 14px;
 }
 
 .section_4 .container .blog_container__right .blog_wrapper__text h3 {
-  font-size: 20px;
-  line-height: 250%;
+  font-size: 16px;
+  line-height: 200%;
+  padding: 3px 0;
 }
 
 .section_4 .container .blog_container__right .blog_wrapper__text p i {
   padding-right: 5px;
-}
-
-.section_4 .container .blog_container__right .third {
-  margin-bottom: unset;
 }
 
 .section_4 .container .btn_4 {
@@ -524,26 +521,39 @@
   width: 15%;
 }
 
-.section_6 .container .news table {
+.section_6 .container .news_container {
   width: 100%;
-  border-collapse: collapse;
-}
-
-.section_6 .container .news table td {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
+  margin: 20px auto;
   padding: 10px;
 }
 
-.section_6 .container .news table tr {
-  padding: 10px;
+.section_6 .container .news_container .n-date {
+  width: 15%;
 }
 
-.section_6 .container .news table tr:nth-child(even) {
-  padding: 1px;
-  opacity: 0;
+.section_6 .container .news_container .n-date i {
+  padding-right: 5px;
 }
 
-.section_6 .container .news table tr:nth-child(even) td {
-  padding: 0px;
+.section_6 .container .news_container .n-title {
+  width: 70%;
+}
+
+.section_6 .container .news_container .n-btn {
+  background-color: #d1b280;
+  color: #ffffff;
+  border: #d1b280;
+  padding: 5px 10px;
 }
 /*# sourceMappingURL=top.css.map */

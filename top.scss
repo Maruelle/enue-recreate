@@ -223,6 +223,7 @@
         width: 49%;
         // background: url('../img/IMG9.jpeg');
         object-fit: contain;
+        height: 80vh;
       }
       &__right {
         width: 49%;
@@ -235,13 +236,13 @@
           background-color: #ffffff;
           width: 100% !important;
           margin-bottom: 20px;
-          .blog_wrapper:nth-child(2) {
-            margin-bottom: unset !important;
-          }
+          height: 25vh;
+
           &__img {
             width: 50% !important;
             img {
               object-fit: cover;
+              height: 100% !important;
             }
           }
           &__text {
@@ -252,10 +253,12 @@
               background-color: #d1b280;
               color: #ffffff;
               padding: 3px;
+              font-size: 14px;
             }
             h3 {
-              font-size: 20px;
-              line-height: 250%;
+              font-size: 16px;
+              line-height: 200%;
+              padding: 3px 0;
             }
             p {
               i {
@@ -263,9 +266,6 @@
               }
             }
           }
-        }
-        .third {
-          margin-bottom: unset;
         }
       }
     }
@@ -402,22 +402,29 @@
       }
     }
     .news {
-      table {
+      &_container {
         width: 100%;
-        border-collapse: collapse;
-        td {
-          background-color: #ffffff;
-          padding: 10px;
-        }
-        tr {
-          padding: 10px;
-          &:nth-child(even) {
-            padding: 1px;
-            opacity: 0;
-            td {
-              padding: 0px;
-            }
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        margin: 20px auto;
+        padding: 10px;
+        .n-date {
+          width: 15%;
+          i {
+            padding-right: 5px;
           }
+        }
+        .n-title {
+          width: 70%;
+        }
+        .n-btn {
+          background-color: #d1b280;
+          color: #ffffff;
+          border: #d1b280;
+          padding: 5px 10px;
         }
       }
     }
