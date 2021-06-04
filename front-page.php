@@ -6,12 +6,12 @@
         </div>
         <div id="right" class="right">
             <ul>
-                <li class="link active"><a href="front-page.php">TOP</a></li>
-                <li class="link"><a href="service.php">弊社サービス</a></li>
-                <li class="link"><a href="flow.php">お問合せからの流れ</a></li>
-                <li class="link"><a href="company_info.php">会社概要</a></li>
-                <li class="link"><a href="recruitment.php">採用情報</a></li>
-                <li class="link"><a href="contact.php">お問い合わせ</a></li>
+                <li class="link active"><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
+                <li class="link"><a href="<?php echo esc_url(home_url('Service')); ?>">弊社サービス</a></li>
+                <li class="link"><a href="<?php echo esc_url(home_url('Flow')); ?>">お問合せからの流れ</a></li>
+                <li class="link"><a href="<?php echo esc_url(home_url('About')); ?>">会社概要</a></li>
+                <li class="link"><a href="<?php echo esc_url(home_url('Recruitment')); ?>">採用情報</a></li>
+                <li class="link"><a href="<?php echo esc_url(home_url('Contact')); ?>">お問い合わせ</a></li>
             </ul>
         </div>
     </div>
@@ -31,12 +31,12 @@
             </div>
             <!-- Mobile Nav -->
             <div class="mobile-nav">
-                <a href="front-page.php">TOP</a>
-                <a href="service.php">弊社サービス</a>
-                <a href="flow.php">お問合せからの流れ</a>
-                <a href="company_info.php">会社概要</a>
-                <a href="recruitment.php">採用情報</a>
-                <a href="contact.php">お問い合わせ</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
+                <a href="<?php echo esc_url(home_url('Service')); ?>">弊社サービス</a>
+                <a href="<?php echo esc_url(home_url('Flow')); ?>">お問合せからの流れ</a>
+                <a href="<?php echo esc_url(home_url('Company Info')); ?>">会社概要</a>
+                <a href="<?php echo esc_url(home_url('Recruitment')); ?>">採用情報</a>
+                <a href="<?php echo esc_url(home_url('Contact')); ?>">お問い合わせ</a>
             </div>
         </div>
     </nav>
@@ -66,13 +66,13 @@
     <section class="section_2 abc">
         <div class="container">
             <div class="container_sect2--1">
-                <img class="ani" animate-effect='fadeInLeft' animate-duration='1.5s' animate-delay='0.1s' src="./assets/img/IMG6.jpeg" alt="Img1">
+                <img class="ani" animate-effect='fadeInLeft' animate-duration='1.5s' animate-delay='0.1s' src="<?php echo get_template_directory_uri(); ?>/assets/img/IMG6.jpeg" alt="Img1">
             </div>
             <div class="container_sect2--2">
-                <img class="ani" animate-effect='fadeInDown' animate-duration='1.5s' animate-delay='0.2s' src="./assets/img/IMG9.jpeg" alt="Img2">
+                <img class="ani" animate-effect='fadeInDown' animate-duration='1.5s' animate-delay='0.2s' src="<?php echo get_template_directory_uri(); ?>/assets/img/IMG9.jpeg" alt="Img2">
             </div>
             <div class="container_sect2--3">
-                <img class="ani" animate-effect='fadeInRight' animate-duration='1.5s' animate-delay='0.1s' src="./assets/img/BUILDING.jpeg" alt="Img3">
+                <img class="ani" animate-effect='fadeInRight' animate-duration='1.5s' animate-delay='0.1s' src="<?php echo get_template_directory_uri(); ?>/assets/img/BUILDING.jpeg" alt="Img3">
             </div>
         </div>
     </section>
@@ -108,45 +108,61 @@
             </div>
             <div class="blog_container">
                 <div class="blog_container__left">
-                    <p>test</p>
+                    <?php
+                    $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+                    $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 1,
+                        'paged' => $paged,
+                    );
+
+                    $the_query = new WP_Query($args);
+                    ?>
+
+                    <?php if ($the_query->have_posts()) : ?>
+
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php echo the_post_thumbnail('large', array('class' => 'post-img')); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
+
+
                 <div class="blog_container__right">
-                    <a href="#">
-                        <div class="blog_wrapper">
-                            <div class="blog_wrapper__img">
-                                <img src="/assets/img/IMG10.jpeg" alt="">
-                            </div>
-                            <div class="blog_wrapper__text">
-                                <span>実績</span>
-                                <h3>test</h3>
-                                <p><i class="fa fa-calendar"></i>May 25,2021</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="blog_wrapper">
-                            <div class="blog_wrapper__img">
-                                <img src="/assets/img/IMG8.jpeg" alt="">
-                            </div>
-                            <div class="blog_wrapper__text">
-                                <span>実績</span>
-                                <h3>test</h3>
-                                <p><i class="fa fa-calendar"></i>May 25,2021</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="blog_wrapper third">
-                            <div class="blog_wrapper__img">
-                                <img src="/assets/img/IMG4.jpeg" alt="">
-                            </div>
-                            <div class="blog_wrapper__text">
-                                <span>実績</span>
-                                <h3>test</h3>
-                                <p><i class="fa fa-calendar"></i>May 25,2021</p>
-                            </div>
-                        </div>
-                    </a>
+                    <?php
+                    $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+                    $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 3,
+                        'paged' => $paged,
+                    );
+
+                    $the_query = new WP_Query($args);
+                    ?>
+
+                    <?php if ($the_query->have_posts()) : ?>
+
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <a href="#">
+                                <div class="blog_wrapper">
+                                    <div class="blog_wrapper__img">
+                                        <?php the_post_thumbnail('medium-large'); ?>
+                                    </div>
+                                    <div class="blog_wrapper__text">
+                                        <span>実績</span>
+                                        <h3><?php the_title(); ?></h3>
+                                        <p><i class="fa fa-calendar"></i><?php echo get_the_date('m.d.Y'); ?></p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
 
@@ -181,34 +197,31 @@
                 <hr>
             </div>
             <div class="news">
-                <table>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Lorem</td>
-                        <td>Test</td>
-                    </tr>
-                    <tr>
-                        <td>&ensp;</td>
-                        <td>&ensp;</td>
-                    </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                    </tr>
-                    <tr>
-                        <td>&ensp;</td>
-                        <td>&ensp;</td>
-                    </tr>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Lorem</td>
-                        <td>Lorem</td>
-                    </tr>
-                </table>
+                <?php
+                $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 5,
+                    'paged' => $paged,
+                );
+
+                $the_query = new WP_Query($args);
+                ?>
+
+                <?php if ($the_query->have_posts()) : ?>
+
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <table>
+                            <tr>
+                                <td><?php echo get_the_date(); ?></td>
+                                <td><?php the_title(); ?></td>
+                                <td> <a href="<?php echo get_permalink(); ?>"> Read More</a></td>
+                            </tr>
+                        </table>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -247,7 +260,7 @@
         </div>
         <div class="right">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=350&amp;height=350&amp;hl=en&amp;q=〒133-0056 東京都江戸川区南小岩２丁目３−１５&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/">Friday Night Funkin</a></div>
+                <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=350&amp;height=350&amp;hl=en&amp;q=〒133-0056 東京都江戸川区南小岩２丁目３−１５&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fridaynightfunkin.net/"></a></div>
                 <style>
                     .mapouter {
                         position: relative;
@@ -256,7 +269,6 @@
                         height: 350px;
                     }
 
-<<<<<<< HEAD
                     .gmap_canvas {
                         overflow: hidden;
                         background: none !important;
@@ -270,42 +282,4 @@
                 </style>
             </div>
         </div>
-=======
-</main>
-<footer>
-  <div class="container">
-    <div class="left">
-      <h3>About Us</h3>
-      <hr>
-      <p> <br>
-        株式会社NA <br><br>
-        〒133-0056 <br>
-        東京都江戸川区南小岩2-3-15 <br><br>
-        TEL 03-6657-9811 <br>
-        FAX 03-6657-9812 <br><br>
-      </p>
-    </div>
-    <div class="c_left nav-act">
-      <h3>サイトマップ</h3>
-      <hr><br><br>
-      <li class="link active"><a href="front-page.php">TOP</a></li>
-      <li class="link"><a href="service.php">弊社サービス</a></li>
-      <li class="link"><a href="flow.php">お問合せからの流れ</a></li>
-      <li class="link"><a href="company_info.php">会社概要</a></li>
-      <li class="link"><a href="recruitment.php">採用情報</a></li>
-      <li class="link"><a href="contact.php">お問い合わせ</a></li>
-    </div>
-    <div class="c_right">
-    <h3>Contact Us</h3>
-      <hr><br><br>
-      <p>以下よりお気軽にお問合せ下さい。</p>
-      <a href="contact.php">
-        <button class="btn_ft">お問合せページへ</button>
-      </a>
->>>>>>> dc100ef38575ddd370256ad9ec80f26f2ded44ad
-    </div>
-    <div class="copyright">
-        <p><span>&copy;</span>2020 NA. All rights reserved.</p>
-    </div>
-</footer>
-<?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
