@@ -124,7 +124,8 @@
                     <?php if ($the_query->have_posts()) : ?>
 
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                            <?php echo the_post_thumbnail('large', array('class' => 'post-img')); ?>
+                            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'large');
+                            echo '<li class="produkt" style="width:100%; height: 100%; background-size: cover; background-position:center center; background-repeat:no-repeat; background-image: url(' . $url . ')">'; ?>
 
                         <?php endwhile; ?>
                     <?php endif; ?>
