@@ -241,7 +241,7 @@
     <h3>Contact Us</h3>
       <hr><br><br>
       <p>以下よりお気軽にお問合せ下さい。</p>
-      <a href="#">
+      <a href="contact.php">
         <button class="btn_ft">お問合せページへ</button>
       </a>
     </div>

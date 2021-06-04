@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/company_info.css">
     <link rel="stylesheet" href="assets/css/recruitment.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/single.css">
 </head>
 
 <body>
