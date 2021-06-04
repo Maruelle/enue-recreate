@@ -1,0 +1,81 @@
+.Page_Banner {
+  background-color: #594d46;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .Page_Banner {
+    height: 80vh;
+  }
+}
+
+.Page_Banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7));
+  opacity: .6;
+}
+
+.Page_Banner__title {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.Page_Banner__subtitle {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 55%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.Recruitment_section_1 {
+  background-color: #594D46;
+}
+
+.Recruitment_section_1 .container {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  width: 1140px;
+  max-width: 80%;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 767px) {
+  .Recruitment_section_1 .container {
+    max-width: 100% !important;
+  }
+}
+
+.Recruitment_section_1 .container p {
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF !important;
+  line-height: 200%;
+}
+/*# sourceMappingURL=recruitment.css.map */

@@ -1,0 +1,161 @@
+.C_Page_Banner {
+  background-color: #594d46;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .C_Page_Banner {
+    height: 80vh;
+  }
+}
+
+.C_Page_Banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7));
+  opacity: .6;
+}
+
+.C_Page_Banner__title {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.C_Page_Banner__subtitle {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 55%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .C_Page_Banner__subtitle {
+    top: 60%;
+  }
+}
+
+.C_info_section_1 {
+  background-color: #594D46;
+}
+
+.C_info_section_1 .container {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  width: 1140px;
+  max-width: 40%;
+  margin: 0 auto;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 767px) {
+  .C_info_section_1 .container {
+    max-width: 70%;
+  }
+}
+
+.C_info_section_1 .container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.C_info_section_1 .container table td {
+  padding: 20px 10px;
+}
+
+.C_info_section_1 .container table td:nth-child(odd) {
+  font-weight: 700;
+}
+
+.C_info_section_1 .container table td:nth-child(even) {
+  padding-left: 10%;
+}
+
+.C_info_section_1 .container table tr {
+  padding: 10px;
+}
+
+.C_info_section_2 {
+  background: url("../img/message_bg.png");
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.C_info_section_2 .container {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  text-align: center;
+  width: 1140px;
+  max-width: 55%;
+}
+
+@media only screen and (max-width: 767px) {
+  .C_info_section_2 .container {
+    width: 320px;
+    max-width: 100%;
+  }
+}
+
+.C_info_section_2 .container span {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.C_info_section_2 .container h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.C_info_section_2 .container hr {
+  border: 3px solid #FFFFFF;
+  background-color: #FFFFFF;
+  width: 15%;
+}
+
+@media only screen and (max-width: 767px) {
+  .C_info_section_2 .container hr {
+    width: 40%;
+  }
+}
+
+.C_info_section_2 .container p {
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 200%;
+  text-align: left;
+}
+
+.C_info_section_2 .container .ceo_signature {
+  margin: 0 auto;
+  padding-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=company_info.css.map */

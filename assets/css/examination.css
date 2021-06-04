@@ -1,0 +1,92 @@
+.section_1 {
+  background-image: url("../img/banner.png");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.section_1__title {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.section_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  position: absolute !important;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  max-width: 1200px !important;
+}
+
+.section_2__col-1 {
+  background: #83ccee;
+  width: 33.33%;
+  padding: 50px 30px;
+}
+
+.section_2__title {
+  text-align: center;
+  color: #ffffff;
+}
+
+.section_2__desc {
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 3em 0 0 0;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Yu Gothic", sans-serif;
+}
+
+.section_2__col-2 {
+  background: #6ec0e5;
+  width: 33.33%;
+  padding: 50px 30px;
+}
+
+.section_2__col-3 {
+  background: #58a7cb;
+  width: 33.33%;
+  padding: 50px 30px;
+}
+
+.section_3 {
+  text-align: center;
+  margin: 10em 0;
+}
+
+.section_3__title {
+  font-size: 2.375rem;
+  font-family: "Yu Gothic", sans-serif;
+}
+
+.section_3__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section_3__col_1 {
+  width: 50%;
+}
+
+.section_3__col_2 {
+  width: 50%;
+}
+/*# sourceMappingURL=examination.css.map */

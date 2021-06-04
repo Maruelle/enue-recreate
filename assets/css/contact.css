@@ -1,0 +1,157 @@
+.Page_Banner {
+  background-color: #594d46;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .Page_Banner {
+    height: 80vh;
+  }
+}
+
+.Page_Banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7));
+  opacity: .6;
+}
+
+.Page_Banner__title {
+  font-size: 3.2rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.Page_Banner__subtitle {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  position: absolute !important;
+  top: 55%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .Page_Banner__subtitle {
+    top: 58%;
+  }
+}
+
+.Contact_form {
+  background-color: #594d46;
+  padding: 100px 0px;
+}
+
+.Contact_form .container {
+  padding: 50px 40px;
+  padding-right: 60px;
+  margin: 0 auto;
+  width: 700px !important;
+  background-color: #D1B280;
+}
+
+@media only screen and (max-width: 767px) {
+  .Contact_form .container {
+    width: 80% !important;
+    padding: 20px 10px;
+    padding-right: 30px;
+  }
+}
+
+.Contact_form .container .form_title {
+  text-align: center;
+}
+
+.Contact_form .container .form_title p {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.Contact_form .container .form_title h3 {
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.Contact_form .container .form_title hr {
+  border: 1px solid #333;
+  background-color: #333;
+  width: 28%;
+}
+
+@media only screen and (max-width: 767px) {
+  .Contact_form .container .form_title hr {
+    width: 44%;
+  }
+}
+
+.Contact_form .container label {
+  padding-left: 10px;
+  color: #333;
+}
+
+.Contact_form .container label span {
+  color: #cf0000;
+  padding-left: 3px;
+}
+
+.Contact_form .container input, .Contact_form .container textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+  resize: none;
+}
+
+.Contact_form .container .iagree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Contact_form .container .iagree input[type=checkbox] {
+  width: 1%;
+  padding: unset;
+}
+
+.Contact_form .container input[type=submit] {
+  width: 30%;
+  background-color: #333;
+  color: #FFFFFF;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .Contact_form .container input[type=submit] {
+    width: 60%;
+  }
+}
+
+.Contact_form .container input[type=submit]:hover {
+  background-color: #FFFFFF;
+  color: #333;
+}
+/*# sourceMappingURL=contact.css.map */
